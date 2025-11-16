@@ -142,8 +142,29 @@
 // console.log(arr)
 // console.log(largest);
 
-let number = [2, 5, 2, 7, 5, 9, 7];
-let arr = [number[0]]
-for(let i = 0 ; i < number.length ; i++) {
-    if(number[i)
-}
+// let number = [2, 5, 2, 7, 5, 9, 7];
+// let arr = [number[0]]
+// for(let i = 0 ; i < number.length ; i++) {
+//     if(number[i)
+// }
+
+// console.log(2 + "2")
+// let x = 5 ;
+// let y = ++x ;
+// console.log(x , y)
+// console.log(10 % 4);
+// let str = "hello" ;
+// console.log(str.slice(1 , 2))
+
+// let arr = [3 ,2  ,4 ];
+// arr[10] = 10 ;
+// console.log(arr);
+// let x = 6.9887 ;
+// console.log(x.toFixed(1));
+
+// let x = 0 ;
+// while (x > 5) {
+//     console.log("hello world");
+// }
+
+console.log(typeof(typeof(undefined)));
