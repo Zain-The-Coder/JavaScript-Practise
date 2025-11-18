@@ -167,4 +167,21 @@
 //     console.log("hello world");
 // }
 
-console.log(typeof(typeof(undefined)));
+// console.log(typeof(typeof(undefined)));
+
+// let num = 3.432 ;
+// console.log(typeof(num.toFixed(2)));
+// console.log()
+
+// console.log(typeof(new Date()))
+
+// let x = new Date();
+// x.setDate();
+// console.log(x)
+// console.log(x.getDay());
+// console.log(typeof(typeof(x.getFullYear())));
+
+// let x = prompt("enter something");
+// console.log(typeof(x))
+
+console.log(parseFloat(1.99999))

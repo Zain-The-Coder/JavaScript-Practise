@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1 style="text-transform: uppercase;">hello HumBurger Menu</h1>
+    <div id="div" class="container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+        <a href="#">Link 6</a>
+    </div>
+    <div>
+    <button id="humberger" onclick="press()">humburger Menu </button>
+    <div id="links" style="display: none;">
+        <a id="anchor" href="#">Link 1</a>
+        <a id="anchor" href="#">Link 2</a>
+        <a id="anchor" href="#">Link 3</a>
+        <a id="anchor" href="#">Link 4</a>
+        <a id="anchor" href="#">Link 5</a>
+        <a id="anchor" href="#">Link 6</a>
+    </div>
+    </div>
+    </header>
+
+    <script>
+        let x = document.getElementById("humberger");
+        let div = document.getElementById("links");
+        function press () {
+            div.style.display = "flex";
+            div.style.flexDirection = "column"
+            div.style.border = "1px solid black" ;
+            div.style.gap = "20px";
+            div.style.position = "absolute";
+            div.style.width = "14%";
+            div.style.backgroundColor = "black" ;
+        }
+
+    </script>
+</body>
+</html>
