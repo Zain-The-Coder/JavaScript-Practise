@@ -1,3 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">MyLogo</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+</body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,41 +44,27 @@
 </head>
 <body>
     <header>
-    <h1 style="text-transform: uppercase;">hello HumBurger Menu</h1>
-    <div id="div" class="container">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
-        <a href="#">Link 5</a>
-        <a href="#">Link 6</a>
-    </div>
-    <div>
-    <button id="humberger" onclick="press()">humburger Menu </button>
-    <div id="links" style="display: none;">
-        <a id="anchor" href="#">Link 1</a>
-        <a id="anchor" href="#">Link 2</a>
-        <a id="anchor" href="#">Link 3</a>
-        <a id="anchor" href="#">Link 4</a>
-        <a id="anchor" href="#">Link 5</a>
-        <a id="anchor" href="#">Link 6</a>
-    </div>
-    </div>
+        <h1>My Website</h1>
+        <nav>
+            <ul id="links" class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </nav>
+        <div id="burger" class="humburger">
+            <span>Humberger</span>
+        </div>
     </header>
 
     <script>
-        let x = document.getElementById("humberger");
-        let div = document.getElementById("links");
-        function press () {
-            div.style.display = "flex";
-            div.style.flexDirection = "column"
-            div.style.border = "1px solid black" ;
-            div.style.gap = "20px";
-            div.style.position = "absolute";
-            div.style.width = "14%";
-            div.style.backgroundColor = "black" ;
-        }
-
+        let humburger = document.getElementById("burger");
+        let links = document.getElementById("links");
+        humburger.addEventListener("click" , () => {
+            links.classList.toggle('active');
+        })
     </script>
 </body>
 </html>
