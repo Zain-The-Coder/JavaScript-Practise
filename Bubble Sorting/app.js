@@ -86,16 +86,46 @@
 // let lastIndex = update.at(-1) ;
 // console.log("The Biggest Number In Array Is : " + lastIndex  + "\n" + "The Smaller Number In Array Is " + update[0]);
 
-let arr = [43 , 2 , 345 , 3 , 28, 1];
-let min = arr[0] ;
-let max = arr[0];
-for(let i = 0 ; i < arr.length ; i++) {
-    if(arr[i] > max) {
-        max = arr[i];
+// let arr = [43 , 2 , 345 , 3 , 28, 1];
+// let min = arr[0] ;
+// let max = arr[0];
+// for(let i = 0 ; i < arr.length ; i++) {
+//     if(arr[i] > max) {
+//         max = arr[i];
+//     }
+//     if(arr[i] < min) {
+//         min = arr[i];
+//     }
+// }
+// console.log(max);
+// console.log(min)
+
+// let arr = [54 , 4 ,25 , 564 , 322 , 1 , 46 , 9 , 381 , 100];
+// for(let i = 0 ; i < arr.length -1 ; i++) {
+//     for(let j = 0 ; j < arr.length -1 -i ; j++) {
+//         if(arr[j] > arr[j + 1]) {
+//             let num = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = num ;
+//         }
+//     }
+// }
+// console.log(arr)
+// let fruits = ["apple" , "banana" , "graper"];
+// console.log(fruits);
+// let x = fruits.splice(2 , 1);
+// console.log(x)
+
+
+let arr = [2, 5, 2, 7, 5, 9, 7, 7];
+let x = "" ;
+let el = arr[0];
+for(let i = 0 ; i < arr.length ; i++ ) {
+    let num = 1 ;
+    if(el === arr[i]) {
+        num++ ;
+        x = arr.splice(arr[i] , 1);
     }
-    if(arr[i] < min) {
-        min = arr[i];
-    }
+    el++ ;
+    console.log("The Number Of " + arr[i] + "In Array Is " + num) 
 }
-console.log(max);
-console.log(min)
