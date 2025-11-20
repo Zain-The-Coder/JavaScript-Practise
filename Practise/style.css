@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+    background-color: wheat;
+}
+body.active {
+    background-color: black;
+}
+body.active h1 {
+    color: azure;
+}
