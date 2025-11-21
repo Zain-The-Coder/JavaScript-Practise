@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Slider</title>
-
-<style>
-  .slider{
-    width: 600px;
-    height: 350px;
-    margin: 50px auto;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #000;
-    border-radius: 8px;
-  }
-
-  .slides{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: 1s;
-  }
-
-  .slides img{
-    width: 600px;
-    height: 350px;
-  }
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .slider {
+      position: relative;
+      border: 1px solid black;
+      height: 300px;
+      width: 500px;
+      border-radius: 8px;
+      overflow:hidden ;
+    }
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: all 1s ease;
+    }
+    .slides img {
+      width: 500px;
+      height: 300px;
+    }
   button{
     position: absolute;
     top: 50%;
@@ -41,53 +36,54 @@
   }
   #prev{ left: 10px; }
   #next{ right: 10px; }
-</style>
-
+  </style>
 </head>
 <body>
-
-<div class="slider">
-  <div class="slides" id="slideBox">
-      <img src="https://picsum.photos/id/1011/600/350">
-      <img src="https://picsum.photos/id/1015/600/350">
-      <img src="https://picsum.photos/id/1016/600/350">
+  <div class="slider">
+    <div class="slides" id="slideBox">
+      <img src="https://picsum.photos/id/1011/600/350" alt="first-image">
+      <img src="https://picsum.photos/id/1015/600/350" alt="second-image">
+      <img src="https://picsum.photos/id/1016/600/350" alt="third-image">
   </div>
 
   <button id="prev">❮</button>
   <button id="next">❯</button>
-</div>
+  </div>
 
+  <script>
+    let leftButton = document.getElementById("prev");
+    let rightButton = document.getElementById("next");
+    let imgDiv = document.getElementById("slideBox");
+    let total = imgDiv.children.length;
+    let index = 0 ;
 
-<script>
-  let index = 0;
-  const slides = document.getElementById("slideBox");
-  const total = slides.children.length;
-
-  function showSlide() {
-    slides.style.transform = `translateX(-${index * 600}px)`;
-  }
-
-  document.getElementById("next").onclick = () => {
-    index++;
-    if(index >= total) {
-        index = 0;
+    function imageChanger () {
+    imgDiv.style.transform = `translateX(-${index * 500}px)`;
     }
-    showSlide();
-  }
 
-  document.getElementById("prev").onclick = () => {
-    index--;
-    if(index < 0) index = total - 1;
-    showSlide();
-  }
+    rightButton.addEventListener("click" , () => {
+      index++ ;
+      if(index >= total) {
+        index = 0 ;
+      }
+      imageChanger();
+    });
 
-  // Auto slide every 3 seconds
-  setInterval(() => {
-    index++;
-    if(index >= total) index = 0;
-    showSlide();
-  }, 3000);
-</script>
+    leftButton.addEventListener("click" , () => {
+      index-- ;
+      if(index < 0) {
+        index = total -1 ;
+      }
+      imageChanger();
+    });
 
+    setInterval(() => {
+      index++ ;
+      if(index >= total) {
+        index = 0 ;
+      }
+      imageChanger()
+    }, 2300);
+  </script>
 </body>
 </html>
