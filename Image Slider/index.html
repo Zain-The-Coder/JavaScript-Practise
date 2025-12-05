@@ -40,11 +40,11 @@
 </head>
 <body>
   <div class="slider">
-    <div class="slides" id="slideBox">
+    <!-- <div class="slides" id="slideBox">
       <img src="https://picsum.photos/id/1011/600/350" alt="first-image">
       <img src="https://picsum.photos/id/1015/600/350" alt="second-image">
       <img src="https://picsum.photos/id/1016/600/350" alt="third-image">
-  </div>
+  </div> -->
 
   <button id="prev">❮</button>
   <button id="next">❯</button>
@@ -84,6 +84,13 @@
       }
       imageChanger()
     }, 2300);
+  </script>
+  <script>
+    let arr = ["apple" , "banana" , "orange"];
+    let [count , ...extraCount] = arr ;
+    console.log(count);
+    console.log(extraCount)
+    console.log(arr)
   </script>
 </body>
 </html>
