@@ -262,22 +262,22 @@
 
 // }
 
-let x = document.getElementById("name");
-let y = document.getElementById("password");
+// let x = document.getElementById("name");
+// let y = document.getElementById("password");
 
-let userInfo = [] ;
+// let userInfo = [] ;
 
-function submit () {
-    let a = localStorage.getItem("userInformation");
-    if(a) {
-        userInfo.push(JSON.parse(a));
-    }
-    userData = {
-        userName : x.value ,
-        userPassword : y.value ,
-    }
-    userInfo.push(userData);
+// function submit () {
+//     let a = localStorage.getItem("userInformation");
+//     if(a) {
+//         userInfo.push(JSON.parse(a));
+//     }
+//     userData = {
+//         userName : x.value ,
+//         userPassword : y.value ,
+//     }
+//     userInfo.push(userData);
     
-    console.log(userInfo);
-    localStorage.setItem("userInformation" , JSON.stringify(userInfo));
-}
+//     console.log(userInfo);
+//     localStorage.setItem("userInformation" , JSON.stringify(userInfo));
+// }

@@ -185,3 +185,6 @@
 // console.log(typeof(x))
 
 console.log(parseFloat(1.99999))
+
+let heading = document.getElementsByTagName("h1");
+console.log(heading.length);

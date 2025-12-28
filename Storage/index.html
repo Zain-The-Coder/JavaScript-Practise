@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style> 
-    *{
-        background-color: black;
-    }
-        #first , #second , #third {
-            font-size: 260px;
-        }
-        h1 {
-            margin-left: 50px;
-            margin-top: 100px;
-            color: #00f ;
-        }
-    </style> -->
 </head>
 <body>
-    <!-- <h1><span id="first"></span><span id="second"></span><span id="third"></span></h1> -->
+<input type="file" id="imgInput" accept="image/*">
+<img id="preview" width="200" style="display:none; border:1px solid #ccc; padding:5px;">
 
-    <label for="name">Enter Your Name :
-    <input type="text" id="name" placeholder="Enter Your Name"> </label> <br>
-    <label for="password">Enter Your Password :
-        <input type="password" id="password" placeholder="Enter Your Password"></label> <br>
-        <button onclick="submit()">Submit</button>
+<script>
+const input = document.getElementById("imgInput");
+const preview = document.getElementById("preview");
 
+input.addEventListener("change", () => {
+  const file = input.files[0];  // user ne select ki hui image
+  if (!file) return;            // agar cancel kar diya to exit
 
-    <script src="app.js"></script>
+  const reader = new FileReader(); // file ko read karne ke liye
+
+  reader.onload = () => {
+    preview.src = reader.result;   // image screen par show
+    preview.style.display = "block"; // image dikh jaye
+    console.log(reader.result)
+  };
+
+  localStorage.setItem("imageLink" , reader.readAsDataURL(file)); // file → base64 (browser ke liye readable)
+  console.log(x);
+});
+
+</script>
+
 </body>
 </html>

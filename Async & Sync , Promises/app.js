@@ -111,3 +111,19 @@
 //     .catch((fail) =>  {
 //         console.log(fail);
 //     })
+
+
+// console.log("hello world");
+// function hello () {
+//     console.log("hi bro")
+// }
+// hello()
+
+// let myPromise = new Promise((resolve , reject) => {
+//     resolve("Promise Is Resolved");
+//     reject("promise Is Rejected");
+//     console.log(resolve.length);
+//     console.log(reject)
+// })
+// console.log(myPromise)
+
